@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background: url("https://cdn.wallpapersafari.com/84/68/hYG6yK.jpg");
+  width: 100%;
+  height: 100vh;
+  font-size: 16px;
+}
+nav {
+    top: 0;
+    height: 100px;
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgb(67, 50, 50) ;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid #b9a14f;
+    z-index: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.wrapper{
+  width: 100%;
+  padding: 10px;
+  margin-top: 50px;
+}
+.container{
+  max-width: 800px;
+  min-width: 410px;
+  height: auto;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-image: url(Images/background.jpg);
+  padding: 20px 40px 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top: 7px solid #6c5c1a;
+}
+
+.title{
+  color: #6c5c1a;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.input-form{
+  margin-bottom: 20px;
+}
+
+.input-form .label{
+	  display: block;
+    font-size: 1em;
+    color: #212121;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.input-form .items{
+  margin-bottom: 20px;
+}
+
+.section-1 .items .input,
+.section-2 .items .input,
+.section-3 .items .input{
+    background: #fff;
+    border: 2px solid #b89a55;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #212121;
+    border-radius: 3px;
+}
+
+.input-form .section-3{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-form .section-3 .items{
+   width: 48%;
+}
+
+.btn{
+	background: #5f6c7d;
+	color: #fff;
+	font-size: 1.25em;
+    margin: 10px;	
+	padding: 10px 0;
+	text-align: center;
+	text-transform: uppercase;
+    text-decoration: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.btn:hover {
+    color: #fff;
+    background-color: darkgreen;
+    text-decoration: none;
+}
+.btn::after {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+    color: #fff;
+    }
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cvv{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.cvv .tooltip{
+  color: #d4d4d4;
+  border: 2px solid #d4d4d4;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align:center;
+  cursor: pointer;
+}
+
+.cvv .cvv-img{
+  position: absolute;
+  top: -300%;
+  right: 0;
+  background: #5f6c7d;
+  padding: 12px;
+  border-radius: 5px;
+  display: none;
+}
+
+.cvv .cvv-img img{
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.cvv:hover .cvv-img{
+  display: block;
+}
+
+@media screen and (max-width: 460px){
+  .input-form .section-3{
+    flex-direction: column;
+  }
+  .input-form .section-3 .items{
+     width: 100%;
+  }
+  .input-form .items{
+    margin-bottom: 10px;
+  }
+
+  .input-form{
+    margin-bottom: 15px;
+  }
+  .title{
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+}

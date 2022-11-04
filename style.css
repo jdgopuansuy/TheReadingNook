@@ -1,0 +1,403 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    width: auto;
+    height: 100vh;
+    background-image: url(Images/background.jpg) ;
+    background-image: linear-gradient(rgba(0,0,0,0,75),rgba(0,0,0,0,75));
+    background-size: cover;
+    background-position: center;;
+}
+nav {
+    top: 0;
+    height: 100px;
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(67, 50, 50) ;
+    flex-wrap: nowrap;
+    border-bottom: 2px solid #b9a14f;
+    z-index: 1;
+}
+nav .brand {
+    display: none;
+}
+.logo {
+    width: 150px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 25px;
+    float: left;
+    position: sticky;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 5px 25px;
+    padding: 0;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff9c8;
+    text-transform: uppercase;
+}
+nav ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff9c8;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+nav ul li:hover::after {
+    width: 100%;
+}
+.brand a:link {
+    text-decoration: none;
+    color: #fff9c8;
+    }
+.brand a:visited {
+    text-decoration: none;
+    color: #fff9c8;
+}
+.brand a:hover {
+    text-decoration: none;
+    color: #fff9c8;
+}
+.brand a:active {
+    text-decoration: none;
+    color: #fff9c8;
+}
+.content {
+    margin: 25px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: rgb(80, 51, 51);
+    justify-content: center;
+}
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    text-align: center;
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    text-align: center;
+}
+.content button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #36312c;
+    background: transparent;
+    color: rgb(67, 50, 50);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.content span {
+    background: #fffaea;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.content button:hover span {
+    width: 100%;
+}
+.content button:hover {
+    border: none;
+}
+/* Library */
+.pagetitle {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    justify-self: center;
+}
+.book-container {
+    background-color: rgb(67, 50, 50);
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.book-container .card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff9c8;
+    width: 300px;
+    height: auto;
+    margin: 20px 10px;
+    border-radius: 5px;
+}
+.book-container .book-cover {
+    align-self: center;
+    padding: 5px;
+    width: 250px;
+    height: 350px;
+}
+.book-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+}
+.book-info .read-more {
+    display: none;
+}
+.book-info span {
+    display: flex;
+}
+/* BUTTONS */
+.book-info .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff9c8;
+}
+.buttons i{
+    display: none;
+}
+.btn-cart {
+    position: relative;
+    padding: 10px 50px;
+    background: #812f2f;
+    color: #fff9c8;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: 0.5;
+    clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 15% 100%, 0% 50%, 14% 0);
+    width: 110px;
+    height: 25px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+.btn-cart:hover {
+    background: #fff9c8;
+    color: #812f2f;
+}
+.btn-wishlist {
+    position: relative;
+    padding: 10px 50px;
+    background: #155010;
+    color: #fff9c8;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: 0.5;
+    clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 15% 100%, 0% 50%, 14% 0);
+    width: 110px;
+    height: 25px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+.btn-wishlist:hover {
+    background: #fff9c8;
+    color: #155010;
+}
+.btn-buynow {
+    position: relative;
+    padding: 10px 50px;
+    background: #dbaf29;
+    color:#36312c;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.5;
+    clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 15% 100%, 0% 50%, 14% 0);
+    width: 110px;
+    height: 25px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    justify-content: center;
+    align-items: center;
+}
+.btn-buynow:hover {
+    background: #fff9c8;
+    color: #155010;
+    letter-spacing: 5px;
+}
+/* CHECKOUT PAGE */
+
+/* MEDIA QUERY */
+@media (max-width:540px) {
+    .logo {
+        display: none;
+    }
+    nav {
+        min-width: 540px;
+    }
+    nav .brand {
+        display:flex;
+        margin: 0 110px;
+        width: auto;
+        text-align: center;
+        color:rgb(252, 232, 206);
+        text-decoration: none;
+        
+    }
+    nav ul li {
+        display: none;
+    }
+    .book-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        width: auto;
+    }
+    .book-container .card {
+        display: flex;
+        flex-direction: row;
+        height: 300px;
+        width: 90%;
+        min-width: 410px;
+        min-height: 280px;
+        border-radius: 5px 5px;
+    }
+    .book-container .book-cover {
+        width: 45%;
+        height: 280px;
+        align-items: center;
+    }
+    .book-info {
+        display: flex;
+        align-items: center;
+    }
+    .book-info p{
+        text-align: center;
+        flex: 1;
+        margin-top: 5px;
+        border-radius: 0 22px 22px 0;
+    }
+    .book-info span {
+        display: none;
+    }
+    .book-info .read-more {
+        display: inline;
+        text-decoration: none;
+    }
+    .buttons i{
+        display: block;
+    }
+    .book-info .buttons {
+        width: 175.3px;
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: center;
+        background: #fff9c8;
+    }
+    .btn-cart {
+        position: relative;
+        padding: 10px;
+        background: #812f2f;
+        color: #fff9c8;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: 0.5;
+        width: auto;
+        height: 70px;
+        display: flex;
+        flex: 2;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(50% 0%, 100% 18%, 100% 100%, 0 100%, 0 18%);
+    }
+    .btn-wishlist {
+        position: relative;
+        padding: 10px;
+        background: #155010;
+        color: #fff9c8;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: 0.5;
+        width: auto;
+        height: 70px;
+        display: flex;
+        flex: 2;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(50% 0%, 100% 18%, 100% 100%, 0 100%, 0 18%);
+    }
+    .btn-buynow {
+        position: relative;
+        padding: 10px;
+        background: #dbaf29;
+        color:#36312c;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 30px;
+        transition: 0.5;
+        width: auto;
+        height: 70px;
+        display: flex;
+        flex: 4;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(50% 0%, 100% 18%, 100% 100%, 0 100%, 0 18%);
+    }
+}
